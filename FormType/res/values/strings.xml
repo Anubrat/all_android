@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">FormType</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+	<string-array name="groups">
+	    <item>Group 1</item>
+	    <item>Group 2</item>
+	    <item>Group 3</item>
+	    <item>Group 4</item>
+	    <item>Group 5</item>
+	    <item>Group 6</item>
+	    <item>Group 7</item>
+	    
+	</string-array>
+</resources>

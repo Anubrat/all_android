@@ -1,0 +1,108 @@
+package com.app.petrolaayo;
+
+import java.util.ArrayList;
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.util.EntityUtils;
+import org.json.JSONArray;
+import org.json.JSONException;
+import android.app.Activity;
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.ListView;
+import android.widget.TextView;
+
+public class MainActivity extends Activity {
+	ArrayList<String> group,pump,address,petrol,diesel;
+	ListView view;
+	TextView view1;
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		ServiceIntent ints=new ServiceIntent();
+		startService(service)
+		MyAsync asyncs=new MyAsync();
+		asyncs.execute("http://manandharbibesh.hostoi.com/jsonValue.php");
+		view=(ListView)findViewById(R.id.listView);
+		view1=(TextView)findViewById(R.id.Date);
+	}
+
+	public class MyAsync extends AsyncTask<String, String, String>{
+		@Override
+		protected void onPreExecute() {
+			// TODO Auto-generated method stub
+			super.onPreExecute();
+		}
+		
+		@Override
+		protected String doInBackground(String... params) {
+			HttpClient myClient=new DefaultHttpClient();
+			HttpPost myPost=new HttpPost(params[0]);
+			try{
+				HttpResponse resp=myClient.execute(myPost);
+				int status=resp.getStatusLine().getStatusCode();
+				if(status==200){
+					HttpEntity ent=resp.getEntity();
+					String data=EntityUtils.toString(ent);
+					return data;
+				}
+						
+			}catch(Exception err){
+				err.printStackTrace();
+			}
+			return null;
+		}
+		
+		@Override
+		protected void onPostExecute(String result) {
+			try {
+				JSONArray arr = new JSONArray(result);
+				view1.setText(arr.getJSONObject(0).getString("miti"));
+				group=new ArrayList<String>();
+				pump=new ArrayList<String>();
+				address=new ArrayList<String>();
+				petrol=new ArrayList<String>();
+				diesel=new ArrayList<String>();
+				for(int i=0;i<arr.length();i++){
+					group.add(arr.getJSONObject(i).getString("group"));
+					pump.add(arr.getJSONObject(i).getString("pump"));
+					address.add(arr.getJSONObject(i).getString("address"));
+					petrol.add(arr.getJSONObject(i).getString("petrol"));
+					diesel.add(arr.getJSONObject(i).getString("diesel"));
+					CustomAdapter adap=new CustomAdapter(MainActivity.this,group,pump,address,petrol,diesel);
+					view.setAdapter(adap);
+				}
+			}catch (JSONException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			super.onPostExecute(result);
+		}
+		
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.main, menu);
+		return true;
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		// Handle action bar item clicks here. The action bar will
+		// automatically handle clicks on the Home/Up button, so long
+		// as you specify a parent activity in AndroidManifest.xml.
+		int id = item.getItemId();
+		if (id == R.id.action_settings) {
+			return true;
+		}
+		return super.onOptionsItemSelected(item);
+	}
+}

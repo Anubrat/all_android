@@ -1,0 +1,12 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.pack.loadshedding.nepal.MainActivity" >
+	
+    <item
+        android:id="@+id/quit"
+        android:title="Quit"
+        android:icon="@android:drawable/btn_star"
+        android:showAsAction="always"
+        />
+
+</menu>

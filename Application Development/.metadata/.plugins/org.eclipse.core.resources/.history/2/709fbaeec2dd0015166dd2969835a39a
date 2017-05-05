@@ -1,0 +1,109 @@
+package com.app.petrolaayo;
+
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.util.EntityUtils;
+import org.json.JSONArray;
+import org.json.JSONException;
+
+import android.app.Service;
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.os.AsyncTask;
+import android.os.IBinder;
+import android.util.Log;
+
+public class ServiceIntent extends Service {
+	SharedPreferences pref;
+	SharedPreferences.Editor edits;
+	@Override
+	public IBinder onBind(Intent intent) {
+		return null;
+	}
+	
+	@Override
+	public int onStartCommand(Intent intent, int flags, int startId) {
+		// TODO Auto-generated method stub
+		MyAsync asyncs=new MyAsync();
+		asyncs.execute("http://manandharbibesh.hostoi.com/jsonValue.php");
+		return 0;
+	}
+	
+	public class MyAsync extends AsyncTask<String, String, String>{
+		protected void onPreExecute() {	
+			super.onPreExecute();		
+		}
+		
+		@Override
+		protected String doInBackground(final String... params) {
+			Thread t1=new Thread(){
+				public void run(){
+					try{
+						Mytask ts=new Mytask();
+						ts.execute(params[0]);
+						sleep(3000);
+					}catch(Exception err){}
+				}
+			};
+			boolean val=true;
+			while(val){
+				t1.run();
+			}
+					
+			String result=getResponse(params[0]);
+				return result;
+		}
+		
+		protected void onPostExecute(String result) {
+			pref=getSharedPreferences("pref", Context.MODE_PRIVATE);
+			edits=pref.edit();
+			edits.putString("MyKeys", result);
+			edits.commit();
+			super.onPostExecute(result);
+		}
+		
+	}
+	
+	
+	public class Mytask extends AsyncTask<String, String, String>{
+		@Override
+		protected void onPreExecute() {
+			// TODO Auto-generated method stub
+			super.onPreExecute();
+		}
+		
+		@Override
+		protected String doInBackground(String... params) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		
+		@Override
+		protected void onPostExecute(String result) {
+			// TODO Auto-generated method stub
+			super.onPostExecute(result);
+		}
+	}
+	
+	public String getResponse(String params){
+		HttpClient myClient=new DefaultHttpClient();
+		HttpPost myPost=new HttpPost(params);
+		try{
+			HttpResponse resp=myClient.execute(myPost);
+			int status=resp.getStatusLine().getStatusCode();
+			if(status==200){
+				HttpEntity ent=resp.getEntity();
+				String data=EntityUtils.toString(ent);
+				return data;
+			}
+		}catch(Exception err){
+			err.printStackTrace();
+		}
+		return null;
+	}
+
+}

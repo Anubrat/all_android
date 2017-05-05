@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">CustomAdapter2</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Click me</string>
+	<string name="click_list">Click here to go to list view</string>
+	<string name="click_grid">Click here to go to Grid view</string>
+	<string name="name">Name</string>
+	<string name="desc">Description</string>
+</resources>

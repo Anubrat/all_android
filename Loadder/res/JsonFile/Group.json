@@ -1,0 +1,74 @@
+[
+    {
+        "Group":"1",
+        "Sunday":"8:00 am - 2:00 pm\n 5:00 pm - 11:00 pm",
+        "Monday":"9:00 am - 5:00 pm \n8:00 pm - 1:00 am",
+        "Tuesday":"8:00 am - 4:00 pm\n 7:00 am - 12:00am",
+        "Wednesday":"5:00 am - 11:00\n am 2:00 pm - 9:00 pm",
+        "Thursday":"6:00 am - 1:00 pm \n4:00 pm - 10:00 pm",
+        "Friday":"3:00 am - 8:00 am 11:00 am - 7:00 pm",
+        "Saturday":"4:00 am - 10:00 am 1:00 pm - 8:00 om"
+    },
+
+    {
+        "Group":"2",
+        "Sunday":"6:00 am - 11:00 pm \n1:00 pm - 8:00 pm",
+        "Monday":"9:00 am - 5:00 pm 8:00 pm - 1:00 am",
+        "Tuesday":"8:00 am - 4:00 pm 7:00 am - 12:00am",
+        "Wednesday":"5:00 am - 11:00 am 2:00 pm - 9:00 pm",
+        "Thursday":"6:00 am - 1:00 pm 4:00 pm - 10:00 pm",
+        "Friday":"3:00 am - 8:00 am 11:00 am - 7:00 pm",
+        "Saturday":"4:00 am - 10:00 am 1:00 pm - 8:00 om"
+    },
+    {
+        "Group":"3",
+        "Sunday":"7:00 am - 2:00 pm 5:00 pm - 11:00 pm",
+        "Monday":"9:00 am - 5:00 pm 8:00 pm - 1:00 am",
+        "Tuesday":"8:00 am - 4:00 pm 7:00 am - 12:00am",
+        "Wednesday":"5:00 am - 11:00 am 2:00 pm - 9:00 pm",
+        "Thursday":"6:00 am - 1:00 pm 4:00 pm - 10:00 pm",
+        "Friday":"3:00 am - 8:00 am 11:00 am - 7:00 pm",
+        "Saturday":"4:00 am - 10:00 am 1:00 pm - 8:00 om"
+    },
+    {
+        "Group":"4",
+        "Sunday":"7:00 am - 2:00 pm 5:00 pm - 11:00 pm",
+        "Monday":"9:00 am - 5:00 pm 8:00 pm - 1:00 am",
+        "Tuesday":"8:00 am - 4:00 pm 7:00 am - 12:00am",
+        "Wednesday":"5:00 am - 11:00 am 2:00 pm - 9:00 pm",
+        "Thursday":"6:00 am - 1:00 pm 4:00 pm - 10:00 pm",
+        "Friday":"3:00 am - 8:00 am 11:00 am - 7:00 pm",
+        "Saturday":"4:00 am - 10:00 am 1:00 pm - 8:00 om"
+    },
+    {
+        "Group":"5",
+        "Sunday":"7:00 am - 2:00 pm 5:00 pm - 11:00 pm",
+        "Monday":"9:00 am - 5:00 pm 8:00 pm - 1:00 am",
+        "Tuesday":"8:00 am - 4:00 pm 7:00 am - 12:00am",
+        "Wednesday":"5:00 am - 11:00 am 2:00 pm - 9:00 pm",
+        "Thursday":"6:00 am - 1:00 pm 4:00 pm - 10:00 pm",
+        "Friday":"3:00 am - 8:00 am 11:00 am - 7:00 pm",
+        "Saturday":"4:00 am - 10:00 am 1:00 pm - 8:00 om"
+    },
+    {
+        "Group":"6",
+        "Sunday":"7:00 am - 2:00 pm 5:00 pm - 11:00 pm",
+        "Monday":"9:00 am - 5:00 pm 8:00 pm - 1:00 am",
+        "Tuesday":"8:00 am - 4:00 pm 7:00 am - 12:00am",
+        "Wednesday":"5:00 am - 11:00 am 2:00 pm - 9:00 pm",
+        "Thursday":"6:00 am - 1:00 pm 4:00 pm - 10:00 pm",
+        "Friday":"3:00 am - 8:00 am 11:00 am - 7:00 pm",
+        "Saturday":"4:00 am - 10:00 am 1:00 pm - 8:00 om"
+    },
+    {
+        "Group":"7",
+        "Sunday":"7:00 am - 2:00 pm 5:00 pm - 11:00 pm",
+        "Monday":"9:00 am - 5:00 pm 8:00 pm - 1:00 am",
+        "Tuesday":"8:00 am - 4:00 pm 7:00 am - 12:00am",
+        "Wednesday":"5:00 am - 11:00 am 2:00 pm - 9:00 pm",
+        "Thursday":"6:00 am - 1:00 pm 4:00 pm - 10:00 pm",
+        "Friday":"3:00 am - 8:00 am 11:00 am - 7:00 pm",
+        "Saturday":"4:00 am - 10:00 am 1:00 pm - 8:00 om"
+    }
+
+]

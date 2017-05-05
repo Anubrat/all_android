@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10sp"
+     >
+    
+<LinearLayout 
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="75sp"
+    android:id="@+id/linearLayout"
+    android:padding="10sp"
+    >
+    <ImageView
+    android:layout_width="50sp"
+    android:layout_height="50sp"
+    android:id="@+id/days"  
+    android:contentDescription="@string/title"
+    />
+    
+    <TextView 
+    android:layout_width="fill_parent"
+    android:layout_height="50sp"
+    android:id="@+id/talika"
+    android:layout_marginStart="10sp"
+    android:layout_marginLeft="10sp"
+	android:textSize="20sp"
+ 
+    />
+    
+</LinearLayout>
+</RelativeLayout>

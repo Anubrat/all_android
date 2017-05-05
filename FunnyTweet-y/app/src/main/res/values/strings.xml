@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">FunnyTweet-y</string>
+    <string name="apiKey">xve8OGuaxTsPFVdjdEmliNSM4-y</string>
+    <string name="apiSec">GntztMm1YYKhSQW0pflKqOGI4YZSYGz6yJOSSt7TWrFs4ShnoP-y</string>
+    <string name="tokKey">84814523-kwLbS9iY6uObx5umvem0iPJHCcMJ5efLAhcR8qaAX-y</string>
+    <string name="tokSec">sdKIqXS1s8KbKwbIZBiQD2ptW5Fn2i5IDQKM8EGYcyaQ0-y</string>
+    <string name="username">b_base</string>
+</resources>

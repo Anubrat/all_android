@@ -1,0 +1,26 @@
+*{
+    padding: 0px;
+    margin: 0px;   
+}
+
+.container{
+    background: antiquewhite;
+    
+}
+
+.divider{
+    height: 10px;
+    background: floralwhite;
+    margin: 5px 0px 5px 0px;
+    cursor: pointer;
+}
+
+.message{
+    height: 300px;
+    width: 300px;
+    content: Helo;
+    background: red;
+}
+.bgGround{
+    background: red;
+}
